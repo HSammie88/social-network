@@ -24,7 +24,7 @@
 body {
   background-color: #F9F9F9;
   width: 100vw;
-  height: auto;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -79,11 +79,12 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
+  justify-content: space-around;
   opacity: 0;
   animation: page-appearing 1s 1 0.5s forwards;
-  margin-top: 200px;
-  width: 330px;
-  height: 600px;
+  margin-top: 90px;
+  width: 100%;
+  height: 100%;
 }
 main .user-container, main .info-container {
   display: flex;
@@ -92,7 +93,26 @@ main .user-container, main .info-container {
   border-radius: 20px;
   box-shadow: 0 4px 4px #E7E7E7;
   flex-direction: column;
+  justify-content: space-around;
   background-color: #FFFFFF;
+  width: 25%;
+  height: 70%;
+}
+main .header-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: left;
+}
+main .header-container .header-image {
+  width: 32px;
+  height: 32px;
+}
+main .header-container .def-header {
+  font-weight: 600;
+  font-size: 26px;
+  color: #3185FC;
+  padding: 5px;
 }
 main .current-user-container {
   display: flex;
@@ -107,7 +127,6 @@ main .current-user-container .user-info-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  justify-content: start;
   padding: 20px;
 }
 main .current-user-container .user-info-container .user-avatar {
@@ -119,6 +138,43 @@ main .current-user-container .user-info-container .user-name {
   font-weight: 500;
   font-size: 26px;
   margin-left: 10px;
+}
+main .current-user-container .user-info {
+  color: #545261;
+  font-weight: 400;
+  font-size: 16px;
+  padding: 10px;
+}
+main .messages-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+main .messages-container .user-message-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+}
+main .messages-container .user-message-container .message-avatar {
+  width: 60px;
+  height: 60px;
+}
+main .list-container {
+  width: 100%;
+  padding: 0 10%;
+}
+main .list-container .friend-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: start;
+}
+main .list-container .friend-container .small-avatar {
+  width: 32px;
+  height: 32px;
+  margin: 5px;
 }
 
 /*# sourceMappingURL=style.css.map */
