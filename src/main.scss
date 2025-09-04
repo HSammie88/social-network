@@ -1,7 +1,6 @@
 @import 'functions';
 @import 'keyframes';
 @import 'mixins';
-@import 'placeholders';
 @import 'variables';
 
 *{
@@ -9,4 +8,102 @@
     padding: 0;
     box-sizing: border-box;
     font-family: $main-font;
+    list-style-type: none;
+}
+
+::-webkit-scrollbar{
+    display: none;
+}
+
+body{
+    background-color: $main-bacground-color;
+    width: 100vw;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+header{
+    width: 100%;
+    height: 80px;
+    background-color: $div-background-color;
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    box-shadow: 0 4px 4px #e3e3e3;
+    transform: translateY(-300px);
+    animation: header-appearing .5s 1 forwards;
+    z-index: 100;
+
+    .logo{
+        @include def-header;
+        margin-left: 47px;
+        font-family: $logo-font;
+    }
+
+    .nav-container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 40%;
+        margin-right: 47px;
+
+        .navigation-link{
+            @include def-link;
+            display: flex;
+            align-items: center;
+            justify-content: start;
+            text-decoration: none;
+
+            .navigation-image{
+                width: 16px;
+                height: 16px;
+                margin: 5px;
+            }
+        }
+    }
+}
+
+main{
+    @include centered-items;
+    opacity: 0;
+    animation: page-appearing 1s 1 .5s forwards;
+    margin-top: 200px;
+    width: 330px;
+    height: 600px;
+
+    .user-container, .info-container{
+        @include centered-items;
+        @include rounded-window(20px, 0 4px 4px #E7E7E7);
+        flex-direction: column;
+        background-color: $div-background-color;
+    }
+
+    .current-user-container{
+        @include centered-items;
+        @include rounded-window(20px, 1px 1px 8px #E7E7E7);
+        flex-direction: column;
+        margin: 20px;
+
+        .user-info-container{
+            @include centered-items;
+            padding: 20px;
+
+            .user-avatar{
+                width: 85px;
+                height: 85px;
+            }
+
+            .user-name{
+                color: $text-color;
+                font-weight: 500;
+                font-size: 26px;
+                margin-left: 10px;
+            }
+        }
+    }
 }

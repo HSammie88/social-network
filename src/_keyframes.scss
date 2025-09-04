@@ -1,0 +1,11 @@
+@keyframes header-appearing {
+    to{
+        transform: translateY(0);
+    }
+}
+
+@keyframes page-appearing {
+    to{
+        opacity: 1;
+    }
+}

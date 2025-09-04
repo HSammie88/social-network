@@ -7,8 +7,119 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header></header>
-    <main></main>
+    <header>
+        <h1 class="logo">FakeLook</h1>
+        <nav class="nav-container">
+            <a href="#" class="navigation-link">
+                <img src="src/img/HomeSmall.png" alt="NavHome" class="navigation-image">
+                Главная
+            </a>
+            <a href="#" class="navigation-link">
+                <img src="src/img/UserSmall.png" alt="NavUser" class="navigation-image">
+                Профиль
+            </a>
+            <a href="#" class="navigation-link">
+                <img src="src/img/EnvelopeSmall.png" alt="NavEnvelope" class="navigation-image">
+                Сообщения
+            </a>
+            <a href="#" class="navigation-link">
+                <img src="src/img/SettingsSmall.png" alt="NavSettings" class="navigation-image">
+                Главная
+            </a>
+        </nav>
+    </header>
+    <main>
+        <div class="user-container">
+            <div class="current-user-container">
+                <div class="user-info-container">
+                    <img src="src/img/person.png" alt="personImage" class="user-avatar">
+                    <h3 class="user-name">Имя</h3>
+                </div>
+                <p class="user-info">Здесь отображается информация о пользователе.</p>
+            </div>
+            <div class="list-container">
+                <div class="header-container">
+                    <img src="src/img/Fire.png" alt="fireImage" class="header-image">
+                    <h2 class="def-header">Популярное</h2>
+                </div>
+                <ul class="themes-container">
+                    <li class="themes-item">Тема 1</li>
+                    <li class="themes-item">Тема 2</li>
+                    <li class="themes-item">Тема 3</li>
+                </ul>
+            </div>
+            <div class="list-container">
+                <div class="header-container">
+                    <img src="src/img/Notification.png" alt="noteImage" class="header-image">
+                    <h2 class="def-header">Уведомления</h2>
+                </div>
+                <ul class="themes-container">
+                    <li class="themes-item">Уведомление 1</li>
+                    <li class="themes-item">Уведомление 2</li>
+                    <li class="themes-item">Уведомление 3</li>
+                </ul>
+            </div>
+        </div>
+        <div class="posts-container">
+            <div class="post-container">
+                <p class="post">Это пост в ленте новостей.</p>
+            </div>
+            <div class="post-container">
+                <p class="post">Еще один пост в ленте новостей.</p>
+            </div>
+        </div>
+        <div class="info-container">
+            <div class="messages-container">
+                <div class="header-container">
+                    <img src="src/img/Letter.png" alt="letterImage" class="header-image">
+                    <h2 class="def-header">Сообщения</h2>
+                </div>
+                <div class="user-message-container">
+                    <img src="src/img/person.png" alt="avatar" class="message-avatar">
+                    <div class="message-container">
+                        <p class="message">Это сообщение от пользователя.</p>
+                        <p class="message-time">10:00</p>
+                    </div>
+                </div>
+                <div class="user-message-container">
+                    <img src="src/img/person.png" alt="avatar" class="message-avatar">
+                    <div class="message-container">
+                        <p class="message">Еще одно сообщение от пользователя.</p>
+                        <p class="message-time">10:00</p>
+                    </div>
+                </div>
+            </div>
+            <div class="list-container">
+                <div class="header-container">
+                    <img src="src/img/User Groups.png" alt="groupImage" class="header-image">
+                    <h2 class="def-header">Друзья</h2>
+                </div>
+                <div class="friend-container">
+                    <img src="src/img/person.png" alt="" class="small-avatar">
+                    <p class="friend-name">Друг 1</p>
+                </div>
+                <div class="friend-container">
+                    <img src="src/img/person.png" alt="" class="small-avatar">
+                    <p class="friend-name">Друг 2</p>
+                </div>
+                <div class="friend-container">
+                    <img src="src/img/person.png" alt="" class="small-avatar">
+                    <p class="friend-name">Друг 3</p>
+                </div>
+            </div>
+            <div class="list-container">
+                <div class="header-container">
+                    <img src="src/img/To Do.png" alt="todoImage" class="header-image">
+                    <h2 class="def-header">Задачи</h2>
+                </div>
+                <ul class="themes-container">
+                    <li class="themes-item">Задача 1</li>
+                    <li class="themes-item">Задача 2</li>
+                    <li class="themes-item">Задача 3</li>
+                </ul>
+            </div>
+        </div>
+    </main>
     <script src="script.js"></script>
 </body>
 </html>

@@ -1,0 +1,29 @@
+@mixin def-header{
+    font-weight: 600;
+    font-size: $header-size;
+    color: $header-color;
+}
+
+@mixin def-link{
+    font-weight: 500;
+    font-size: 18px;
+    color: $header-color;
+    text-decoration: none;
+}
+
+@mixin def-text{
+    color: $text-color;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+@mixin centered-items{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin rounded-window($radius, $shadow){
+    border-radius: $radius;
+    box-shadow: $shadow;
+}
