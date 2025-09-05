@@ -1,4 +1,3 @@
-@import 'functions';
 @import 'keyframes';
 @import 'mixins';
 @import 'variables';
@@ -71,11 +70,18 @@ header{
 main{
     @include centered-items;
     justify-content: space-around;
+    align-items: start;
     opacity: 0;
     animation: page-appearing 1s 1 .5s forwards;
     margin-top: 90px;
     width: 100%;
     height: 100%;
+
+    @media (max-width: 768px) {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
 
     .user-container, .info-container{
         @include centered-items;
@@ -102,14 +108,31 @@ main{
         }
     }
 
+    .themes-container{
+        @include centered-items;
+        flex-direction: column;
+        align-items: start;
+        padding: 10px;
+
+        .themes-item{
+            margin: 5px;
+            cursor: pointer;
+
+            &:hover{
+                animation: hovered-item .5s 1 forwards;
+            }
+        }
+    }
+
     .current-user-container{
         @include centered-items;
         @include rounded-window(20px, 1px 1px 8px #E7E7E7);
         flex-direction: column;
-        margin: 20px;
 
         .user-info-container{
             @include centered-items;
+            justify-content: left;
+            width: 100%;
             padding: 20px;
 
             .user-avatar{
@@ -118,9 +141,8 @@ main{
             }
 
             .user-name{
+                @include def-header;
                 color: $text-color;
-                font-weight: 500;
-                font-size: 26px;
                 margin-left: 10px;
             }
         }
@@ -128,24 +150,54 @@ main{
         .user-info{
             @include def-text;
             padding: 10px;
+            margin-bottom: 10px;
+            width: 70%;
         }
     }
 
     .posts-container{
+        width: 30%;
+        .post-container{
+            @include rounded-window(10px, 0 0 5px gray);
+            @include centered-items;
+            justify-content: start;
+            background-color: $div-background-color;
+            width: 100%;
+            min-height: 100px;
+            height: auto;
+            margin: 20px;
+            padding: 10px;
 
+            .post{
+                @include def-text;
+            }
+        }
     }
 
     .messages-container{
         @include centered-items;
+        align-items: start;
         flex-direction: column;
 
         .user-message-container{
             @include centered-items;
+            justify-content: start;
             padding: 5px;
     
             .message-avatar{
                 width: 60px;
                 height: 60px;
+            }
+
+            .message-container{
+                @include centered-items;
+                flex-direction: column;
+                align-items: start;
+                width: 70%;
+                .message-time{
+                    color: $time-color;
+                    font-size: 12px;
+                }
             }
         }
     }

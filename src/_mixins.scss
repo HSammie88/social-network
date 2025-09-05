@@ -6,7 +6,7 @@
 
 @mixin def-link{
     font-weight: 500;
-    font-size: 18px;
+    font-size: $nav-size;
     color: $header-color;
     text-decoration: none;
 }
@@ -14,7 +14,7 @@
 @mixin def-text{
     color: $text-color;
     font-weight: 400;
-    font-size: 16px;
+    font-size: text-size;
 }
 
 @mixin centered-items{
@@ -23,7 +23,7 @@
     align-items: center;
 }
 
-@mixin rounded-window($radius, $shadow){
+@mixin rounded-window($radius, $shadow: 0 0 0 black){
     border-radius: $radius;
     box-shadow: $shadow;
 }
