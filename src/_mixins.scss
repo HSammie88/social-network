@@ -14,7 +14,7 @@
 @mixin def-text{
     color: $text-color;
     font-weight: 400;
-    font-size: text-size;
+    font-size: $text-size;
 }
 
 @mixin centered-items{
